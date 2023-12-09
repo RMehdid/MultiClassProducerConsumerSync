@@ -1,0 +1,63 @@
+\definecolor{xcodeblue}{rgb}{0, 0.4, 0.9}
+\definecolor{xcodered}{rgb}{0.85, 0, 0.05}
+\definecolor{xcodegreen}{rgb}{0, 0.5, 0}
+\definecolor{xdarkgray}{rgb}{0.1, 0.1, 0.1}
+\definecolor{xlightgray}{rgb}{0.3, 0.3, 0.3}
+
+\lstdefinestyle{xcodestyle}{
+  language=C,
+  numbers=left,  % Show line numbers
+  stepnumber=1,
+  numbersep=5pt,
+  backgroundcolor=\color{xdarkgray},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2,
+  captionpos=b,
+  breaklines=true,
+  breakatwhitespace=true,
+  title=\lstname,
+  keywordstyle=\color{xcodeblue},
+  commentstyle=\color{xlightgray},
+  stringstyle=\color{xcodegreen},
+  basicstyle=\color{white}\ttfamily\small,
+  frame=none, % No frame
+}
+
+\lstset{style=xcodestyle}
+
+
+In this section, we provide a detailed explanation 
+of the implementation of the multi-class producer-consumer synchronization solution 
+using shared memory and semaphores in the C programming language.
+
+\section{Shared Memory and Data Structures}
+
+For inter-process communication, 
+we utilize shared memory with a message buffer and a class integer for the producer.
+
+\lstinputlisting{codeSamples/typedef.c}
+
+\section{Semaphore Initialization}
+
+\lstinputlisting{codeSamples/semaphore_init.c}
+
+\section{Producer Function}
+
+The producer function generates messages and updates the shared memory. 
+It utilizes semaphores for synchronization, 
+ensuring mutual exclusion during critical sections.
+
+\lstinputlisting{codeSamples/producer.c}
+
+\section{Consumer Function}
+
+The consumer function consumes messages from the shared buffer based on the class. 
+It also utilizes semaphores to ensure proper synchronization.
+
+\lstinputlisting{codeSamples/consumer.c}
+
+\section{Forking Processes}
+
+\lstinputlisting{codeSamples/fork.c}

@@ -1,0 +1,11 @@
+In concurrent and parallel computing, 
+effective communication among processes is essential for efficient and synchronized systems. 
+Managing interactions and shared resources is crucial to prevent conflicts and maintain data integrity.
+\section{Problem}
+In this task, we aim to implement a solution for the multi-class producer-consumer synchronization problem. Four producers (P1, P2, P3, P4) and two consumers (C1, C2) share a common buffer.\\
+The challenge is to synchronize access to the buffer, ensuring adherence to class-specific constraints (P1/P2 in CL1, P3/P4 in CL2, C1/C2 consume messages from their respective classes).
+
+\section{Approach}
+To tackle the multi-class producer-consumer synchronization problem, we adopted a solution leveraging shared memory and semaphores in the C programming language. The overall approach involves the creation of shared memory for the buffer and the use of semaphores to synchronize access to this shared resource.
+
+Each producer process is responsible for generating messages, and each consumer process is tasked with consuming messages from the shared buffer. Semaphores are employed to coordinate the access of processes to the buffer, preventing conflicts and ensuring that the specified constraints are met.

@@ -1,0 +1,22 @@
+\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Problem}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Approach}{2}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Implementation}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Shared Memory and Data Structures}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Semaphore Initialization}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Producer Function}{4}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Consumer Function}{4}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Forking Processes}{5}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Challenges}{6}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Challenge 1: Synchronization}{6}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Challenge 2: Shared Memory Access}{6}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Challenge 3: Debugging Forked Processes}{6}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Results}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Scenario 1: Concurrent Execution}{7}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Scenario 2: Stress Testing}{7}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Scenario 3: Class-Based Constraints}{7}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Scenario 4: Error Handling}{7}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{8}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Achievements}{8}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Lessons Learned}{8}{section.5.2}%
+\contentsfinish 

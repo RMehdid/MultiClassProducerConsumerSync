@@ -1,0 +1,32 @@
+\section{Scenario 1: Concurrent Execution}
+
+\textbf{Observations:}
+\begin{itemize}
+    \item Producers and consumers worked well together simultaneously.
+    \item No issues observed with messages from the same class.
+    \item The system handled multiple processes without errors.
+\end{itemize}
+
+\section{Scenario 2: Stress Testing}
+
+\textbf{Observations:}
+\begin{itemize}
+    \item The system handled stress conditions effectively.
+    \item No message overflow or system instability during stress tests.
+\end{itemize}
+
+\section{Scenario 3: Class-Based Constraints}
+
+\textbf{Observations:}
+\begin{itemize}
+    \item Producers and consumers respected class constraints.
+    \item Shared memory maintained proper classification.
+\end{itemize}
+
+\section{Scenario 4: Error Handling}
+
+\textbf{Observations:}
+\begin{itemize}
+    \item Graceful error handling observed in unexpected events.
+    \item Proper cleanup ensured shared memory release on program termination.
+\end{itemize}
