@@ -16,6 +16,12 @@ typedef struct {
 void producer(int class, int semid, shared_memory* shm) {
     struct sembuf sb;
 
+    FILE* file = fopen("messages.txt", "r");
+    if (file == NULL) {
+        perror("Error opening file");
+        exit(1);
+    }
+
     while (1) {
         // Wait before producing (P operation on the semaphore)
         sb.sem_num = 0;
@@ -25,10 +31,14 @@ void producer(int class, int semid, shared_memory* shm) {
 
         // Check the class in the buffer
         if (shm->class == 0 || shm->class == class) {
-            // Produce a message
-            snprintf(shm->buffer, BUFFER_SIZE, "Message de Classe %d", class);
-            shm->class = class;
-            printf("Producer of class %d produced a message.\n", class);
+            // Produce a message from the file
+            if (fgets(shm->buffer, BUFFER_SIZE, file) != NULL) {
+                shm->class = class;
+                printf("Producer of class %d produced a message: %s", class, shm->buffer);
+            } else {
+                // If the end of the file is reached, break the loop
+                break;
+            }
         }
 
         // Signal after production (V operation on the semaphore)
@@ -37,6 +47,8 @@ void producer(int class, int semid, shared_memory* shm) {
 
         sleep(1); // To slow down production
     }
+
+    fclose(file);
 }
 
 void consumer(int class, int semid, shared_memory* shm) {
