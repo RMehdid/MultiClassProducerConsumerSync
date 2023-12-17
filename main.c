@@ -6,7 +6,7 @@
 #include <sys/shm.h>
 #include <sys/sem.h>
 
-#define BUFFER_SIZE 256 // Define BUFFER_SIZE
+#define BUFFER_SIZE 56 // Define BUFFER_SIZE
 
 typedef struct {
     char buffer[BUFFER_SIZE];

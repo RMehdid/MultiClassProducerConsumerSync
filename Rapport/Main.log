@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.9.21)  9 DEC 2023 22:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.9.21)  14 DEC 2023 18:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -664,7 +664,7 @@ l.140 \chapter
 Chapter 1.
 (./Introduction.tex
 LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 4.
+(Font)              scaled to size 14.4pt on input line 1.
 ) [2
 
 ]
@@ -674,7 +674,7 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 40.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 34.
  (/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
@@ -687,7 +687,7 @@ LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 1.
 )
 LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 40.
+(Font)              scaled to size 10.0pt on input line 34.
  (./codeSamples/semaphore_init.c) [3
 
 {/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./codeSamples/producer.c) (./codeSamples/consumer.c [4]) (./codeSamples/fork.c)) [5]
@@ -715,15 +715,15 @@ Chapter 5.
 
 ] (./Main.aux) ) 
 Here is how much of TeX's memory you used:
- 18339 strings out of 476025
- 302914 string characters out of 5779036
- 1898388 words of memory out of 5000000
+ 18333 strings out of 476025
+ 302812 string characters out of 5779036
+ 1900388 words of memory out of 5000000
  38241 multiletter control sequences out of 15000+600000
- 527066 words of font info for 141 fonts, out of 8000000 for 9000
+ 526868 words of font info for 137 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,12n,98p,1040b,2002s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/google/arimo/Arimo-Bold.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/google/arimo/Arimo.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on Main.pdf (9 pages, 142249 bytes).
+Output written on Main.pdf (9 pages, 142105 bytes).
 PDF statistics:
  265 PDF objects out of 1000 (max. 8388607)
  242 compressed objects within 3 object streams

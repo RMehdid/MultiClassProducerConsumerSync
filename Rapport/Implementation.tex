@@ -27,15 +27,9 @@
 
 \lstset{style=xcodestyle}
 
-
-In this section, we provide a detailed explanation 
-of the implementation of the multi-class producer-consumer synchronization solution 
-using shared memory and semaphores in the C programming language.
-
 \section{Shared Memory and Data Structures}
 
-For inter-process communication, 
-we utilize shared memory with a message buffer and a class integer for the producer.
+For inter-process communication, we utilize shared memory with a message buffer and a class integer for the producer.
 
 \lstinputlisting{codeSamples/typedef.c}
 
@@ -45,16 +39,13 @@ we utilize shared memory with a message buffer and a class integer for the produ
 
 \section{Producer Function}
 
-The producer function generates messages and updates the shared memory. 
-It utilizes semaphores for synchronization, 
-ensuring mutual exclusion during critical sections.
+The producer function now reads messages from a file and generates messages based on the class. It updates the shared memory and utilizes semaphores for synchronization, ensuring mutual exclusion during critical sections.
 
 \lstinputlisting{codeSamples/producer.c}
 
 \section{Consumer Function}
 
-The consumer function consumes messages from the shared buffer based on the class. 
-It also utilizes semaphores to ensure proper synchronization.
+The consumer function consumes messages from the shared buffer based on the class. It also utilizes semaphores to ensure proper synchronization.
 
 \lstinputlisting{codeSamples/consumer.c}
 

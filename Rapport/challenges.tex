@@ -10,10 +10,10 @@ One of the primary challenges was achieving effective synchronization among the 
 
 Managing shared memory access and preventing conflicts between processes accessing the shared buffer posed a significant challenge.
 
-\textbf{Solution:} Careful consideration was given to the order of operations and the use of semaphores to regulate access. This helped in avoiding conflicts and maintaining the class-based constraints.
+\textbf{Solution:} Careful consideration was given to the order of operations, and the use of semaphores was extended to manage access to shared memory. This helped in avoiding conflicts and maintaining the class-based constraints.
 
-\section{Challenge 3: Debugging Forked Processes}
+\section{Challenge 3: Reading from a File}
 
-Debugging issues related to forked processes, especially in identifying the origin of errors and ensuring proper termination, presented a challenge.
+Introducing file-based message generation for producers added complexity to the system, requiring adjustments in data flow and synchronization.
 
-\textbf{Solution:} Extensive logging and debugging statements were incorporated into the code. Additionally, systematic testing and monitoring were employed to trace the behavior of individual processes.
+\textbf{Solution:} The producer function was modified to read messages from a file and generate messages based on class constraints. Semaphores continued to play a crucial role in ensuring proper synchronization.
