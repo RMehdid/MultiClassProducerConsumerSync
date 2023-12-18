@@ -13,7 +13,7 @@ typedef struct {
     int class; // 1 for CL1, 2 for CL2
 } shared_memory;
 
-void producer(int class, int semid, shared_memory* shm) {
+void producer(int class, int semid, shared_memory* shm, int index) {
     struct sembuf sb;
 
     FILE* file = fopen("messages.txt", "r");
@@ -34,7 +34,7 @@ void producer(int class, int semid, shared_memory* shm) {
             // Produce a message from the file
             if (fgets(shm->buffer, BUFFER_SIZE, file) != NULL) {
                 shm->class = class;
-                printf("Producer of class %d produced a message: %s", class, shm->buffer);
+                printf("Producer %d of class %d produced: %s\n", index, class, shm->buffer);
             } else {
                 // If the end of the file is reached, break the loop
                 break;
@@ -51,7 +51,7 @@ void producer(int class, int semid, shared_memory* shm) {
     fclose(file);
 }
 
-void consumer(int class, int semid, shared_memory* shm) {
+void consumer(int class, int semid, shared_memory* shm, int index) {
     struct sembuf sb;
 
     while (1) {
@@ -63,7 +63,7 @@ void consumer(int class, int semid, shared_memory* shm) {
 
         // Check the class in the buffer
         if (shm->class == class) {
-            printf("Consumer of class %d consumed: %s\n", class, shm->buffer);
+            printf("Consumer %d of class %d consumed: %s\n", index, class, shm->buffer);
             shm->class = 0; // Reset the class after consumption
         }
 
@@ -111,14 +111,14 @@ int main() {
     for (int i = 1; i <= 4; i++) {
         if (fork() == 0) {
             // Processes P1 and P2 belong to class 1, P3 and P4 to class 2
-            producer(i <= 2 ? 1 : 2, semid, shm);
+            producer(i <= 2 ? 1 : 2, semid, shm, i);
             exit(0);
         }
     }
 
     for (int i = 1; i <= 2; i++) {
         if (fork() == 0) {
-            consumer(i, semid, shm); // Consumers C1 and C2
+            consumer(i, semid, shm, i); // Consumers C1 and C2
             exit(0);
         }
     }
